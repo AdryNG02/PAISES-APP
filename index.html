@@ -4,16 +4,30 @@
   <meta charset="UTF-8">
   <title>Buscador de Países</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-  <h1>🌎 Buscador de Información de Países</h1>
+  <header>
+    <h1>🌎 Buscador de Información de Países</h1>
+    <button id="modo-toggle">🌓 Modo Oscuro</button>
+  </header>
 
-  <form action="/buscar" method="get">
-    <input type="text" name="nombre" placeholder="Escribe un país..." required>
+  <form id="formulario">
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe un país..." required>
     <button type="submit">Buscar</button>
     <br>
-    <small style="color: #555;"> Escribe el nombre del país en inglés (ej. germany, united states)</small>
+    <small style="color: #555;">Puedes escribirlo en español o inglés (ej: Alemania o Germany)</small>
   </form>
+
+  <div id="mensaje"></div>
+
+  <div id="historial-container">
+    <h3>📌 Búsquedas Recientes</h3>
+    <ul id="historial"></ul>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
 
