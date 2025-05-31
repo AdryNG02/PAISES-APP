@@ -1,22 +1,27 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   text-align: center;
   padding: 2rem;
   background: #f0f8ff;
+  color: #111;
+  transition: background 0.4s, color 0.4s;
 }
 
-input {
+body.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+input, button {
   padding: 0.5rem;
   font-size: 1rem;
+  margin: 0.5rem;
 }
 
 button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
   background-color: #4caf50;
   color: white;
   border: none;
-  margin-left: 0.5rem;
   cursor: pointer;
 }
 
@@ -28,5 +33,31 @@ img {
   margin-top: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
+}
+
+#mensaje {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+#historial-container {
+  margin-top: 2rem;
+}
+
+#historial li {
+  list-style: none;
+  cursor: pointer;
+  color: #007bff;
+}
+
+#historial li:hover {
+  text-decoration: underline;
+}
+
+#modo-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
